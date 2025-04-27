@@ -39,9 +39,12 @@ android {
     buildFeatures {
         compose = true
     }
-
-
 }
+
+ksp {
+    arg("ksp.correctErrorTypes", "true")
+}
+
 dependencies {
 
     implementation(libs.androidx.compose.bom)
@@ -82,6 +85,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview.android)
 
     // IMPL CUSTOM LIB - PROCESSOR DEEPLINK DISPATCHER
+    implementation(kotlin("stdlib"))
     implementation(project(mapOf("path" to ":deeplinkdispatcher", "configuration" to "default")))
     ksp(project(mapOf("path" to ":deeplinkdispatcher", "configuration" to "default")))
 

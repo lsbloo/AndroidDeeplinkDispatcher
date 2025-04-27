@@ -2,6 +2,7 @@
 activityCompose = "1.8.2"
 agp = "8.8.0"
 autoService = "1.0-rc7"
+autoServiceKsp = "1.1.1"
 composeBom = "2024.05.00"
 foundation = "1.6.5"
 google-ksp = "2.0.21-1.0.26"
@@ -46,6 +47,7 @@ androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
 auto-service = { module = "com.google.auto.service:auto-service", version.ref = "autoService" }
+auto-service-ksp = { module = "com.google.auto.service:auto-service-ksp", version.ref = "autoServiceKsp" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

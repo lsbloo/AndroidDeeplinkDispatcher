@@ -29,14 +29,21 @@
             android:theme="@style/Theme.AppCompat">
             <intent-filter android:autoVerify="false">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data
-                    android:scheme="example"
-                    android:host="journalapp" />
+                    android:host="journalapp"
+                    android:pathPattern="/*"
+                    android:scheme="student" />
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".feature.uol.UolJournalActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat" />
 
     </application>
 </manifest>
