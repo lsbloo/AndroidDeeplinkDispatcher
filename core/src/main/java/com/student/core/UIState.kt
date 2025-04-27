@@ -1,6 +1,3 @@
 package com.student.core
 
-interface UIState {
-}
-
-
+interface UIState

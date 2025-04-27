@@ -7,9 +7,11 @@ composeBom = "2024.05.00"
 converterGson = "2.9.0"
 foundation = "1.6.5"
 google-ksp = "2.0.21-1.0.26"
-koinAndroid = "2.0.0"
+koinAndroid = "3.5.3"
+koinAndroidVersion = "core"
 koinAndroidxCompose = "3.5.3"
-koinAndroidxComposeVersion = "2.0.0"
+koinAndroidxComposeVersion = "3.5.3"
+koinCore = "3.5.0"
 kotlin = "2.0.21"
 coreKtx = "1.15.0"
 junit = "4.13.2"
@@ -68,8 +70,10 @@ androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "j
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
+koin-android-vcore = { module = "io.insert-koin:koin-android", version.ref = "koinAndroidVersion" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinAndroidxCompose" }
 koin-androidx-compose-v200 = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinAndroidxComposeVersion" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
 kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerializationCore" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 ksp-symbol-processing = { module = "com.google.devtools.ksp:symbol-processing", version.ref = "symbolProcessingVersion" }

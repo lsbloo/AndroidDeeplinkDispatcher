@@ -102,6 +102,7 @@ dependencies {
 
     // KOIN
     implementation(libs.koin.androidx.compose.v200)
+    implementation(libs.koin.core)
     implementation(libs.koin.android)
 
     // SERIALIZATION

@@ -3,8 +3,7 @@ package com.student.journalapp.main.data.api
 import com.student.journalapp.main.data.model.GetAllDeepLinksResponse
 import retrofit2.http.GET
 
-internal interface RecoveryDeepLinksService {
-
+interface RecoveryDeepLinksService {
     @GET("api/recovery/deeplinks")
     suspend fun getAllDeepLinks() : GetAllDeepLinksResponse
 }
