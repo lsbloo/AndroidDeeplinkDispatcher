@@ -1,6 +1,7 @@
 [versions]
 activityCompose = "1.8.2"
 agp = "8.8.0"
+autoService = "1.0-rc7"
 composeBom = "2024.05.00"
 foundation = "1.6.5"
 google-ksp = "2.0.21-1.0.26"
@@ -20,6 +21,8 @@ navigationCompose = "2.7.7"
 runtime = "1.6.5"
 runtimeAndroid = "1.8.0"
 runtimeLivedata = "1.6.5"
+symbolProcessingApi = "2.1.20-1.0.32"
+symbolProcessingVersion = "2.1.20-1.0.32"
 ui = "1.6.5"
 uiTestManifest = "1.6.5"
 uiTooling = "1.6.5"
@@ -42,19 +45,21 @@ androidx-ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
 androidx-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
 androidx-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 androidx-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "uiToolingPreview" }
+auto-service = { module = "com.google.auto.service:auto-service", version.ref = "autoService" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinAndroidxCompose" }
+ksp-symbol-processing = { module = "com.google.devtools.ksp:symbol-processing", version.ref = "symbolProcessingVersion" }
 lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleRuntimeCompose" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-runtime-android = { group = "androidx.compose.runtime", name = "runtime-android", version.ref = "runtimeAndroid" }
 androidx-ui-tooling-preview-android = { group = "androidx.compose.ui", name = "ui-tooling-preview-android", version.ref = "uiToolingPreviewAndroid" }
+symbol-processing-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "symbolProcessingApi" }
 ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiTestManifest" }
 ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = "uiTooling" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-google-ksp = { id = "com.google.devtools.ksp", version.ref = "google-ksp" }

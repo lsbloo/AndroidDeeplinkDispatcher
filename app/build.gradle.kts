@@ -2,15 +2,16 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id("org.jetbrains.kotlin.plugin.compose") version "2.1.10"
+    id("com.google.devtools.ksp") version "2.0.21-1.0.26"
 }
 
 android {
-    namespace = "dev.forcetower.deeplinked"
+    namespace = "com.student.journalapp"
     compileSdk = 35
 
     defaultConfig {
         applicationId = "com.student.journalapp"
-        minSdk = 21
+        minSdk = 24
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -53,21 +54,21 @@ dependencies {
     implementation(libs.androidx.runtime)
     implementation(libs.androidx.runtime.livedata)
 
-// Activity Compose
+    // Activity Compose
     implementation(libs.androidx.activity.compose)
 
-// Lifecycle ViewModel + Compose
+    // Lifecycle ViewModel + Compose
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
-// Navigation Compose
+    // Navigation Compose
     implementation(libs.androidx.navigation.compose)
 
-// Koin DI para Compose
+    // Koin DI para Compose
     implementation(libs.koin.androidx.compose)
 
-// Tooling (para visualizar o Compose Preview no Android Studio)
+    // Tooling (para visualizar o Compose Preview no Android Studio)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
 
@@ -80,9 +81,9 @@ dependencies {
     implementation(libs.androidx.runtime.android)
     implementation(libs.androidx.ui.tooling.preview.android)
 
-    // NOT YET
-    //ksp("com.student.journalapp.deeplink.core:deeplink-processor:1.0.0")
-
+    // IMPL CUSTOM LIB - PROCESSOR DEEPLINK DISPATCHER
+    implementation(project(mapOf("path" to ":deeplinkdispatcher", "configuration" to "default")))
+    ksp(project(mapOf("path" to ":deeplinkdispatcher", "configuration" to "default")))
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

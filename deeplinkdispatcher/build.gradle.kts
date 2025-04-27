@@ -1,7 +1,7 @@
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.library")
     alias(libs.plugins.kotlin.android)
-    id("com.google.devtools.ksp") version "2.1.20-1.0.32"
+    id("com.google.devtools.ksp") version "2.0.21-1.0.26"
 }
 
 android {
@@ -9,11 +9,8 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.student.deeplinkdispatcher"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,9 +35,9 @@ android {
 
 dependencies {
 
-
-    implementation("com.google.devtools.ksp:symbol-processing-api:2.1.20-1.0.32")
-    implementation(kotlin("stdlib-jdk8"))
+    implementation(libs.symbol.processing.api)
+    implementation(libs.auto.service)
+    implementation(kotlin("stdlib"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

@@ -1,7 +1,5 @@
 package com.student.deeplinkdispatcher.deeplink
 
-import android.content.Context
-import android.content.Intent
 
 /**
 object DeepLinkDispatcher {
