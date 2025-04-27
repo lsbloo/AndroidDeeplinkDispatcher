@@ -1,2 +1,2 @@
 # AndroidDeeplinkDispatcher
-#Distributor App Using DeeplinkDispatcher AirBnB 
+Android App Using Custom Library for dispatcher DeepLinks
