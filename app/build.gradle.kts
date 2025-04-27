@@ -89,6 +89,29 @@ dependencies {
     implementation(project(mapOf("path" to ":deeplinkdispatcher", "configuration" to "default")))
     ksp(project(mapOf("path" to ":deeplinkdispatcher", "configuration" to "default")))
 
+
+
+    // RETROFIT
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation (libs.androidx.material)
+    implementation (libs.androidx.runtime.livedata.v160)
+    implementation (libs.androidx.lifecycle.runtime.ktx.v261)
+    implementation (libs.androidx.lifecycle.viewmodel.compose.v261)
+
+
+    // KOIN
+    implementation(libs.koin.androidx.compose.v200)
+    implementation(libs.koin.android)
+
+    // SERIALIZATION
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.kotlinx.serialization.core)
+
+    // CORE
+    implementation(project(":core"))
+
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

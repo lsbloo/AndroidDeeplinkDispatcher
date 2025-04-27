@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "JournalApp"
 include(":app")
 include(":deeplinkdispatcher")
+include(":core")

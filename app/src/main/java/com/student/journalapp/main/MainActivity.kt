@@ -1,4 +1,4 @@
-package com.student.journalapp
+package com.student.journalapp.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
