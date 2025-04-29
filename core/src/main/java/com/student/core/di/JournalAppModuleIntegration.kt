@@ -7,4 +7,6 @@ interface JournalAppModuleIntegration {
     fun getDomain(): Module
     fun getData(): Module
     fun getExtras(): Module
+
+    fun get(): List<Module>
 }

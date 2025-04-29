@@ -13,7 +13,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 
 object MainModule : JournalAppModuleIntegration {
-    override fun getPresentation(): Module = module {
+    override fun getPresentation() = module {
         viewModel {
             MainActivityViewModel(
                 recoveryAllDeepLinksUseCase = get()
@@ -39,6 +39,5 @@ object MainModule : JournalAppModuleIntegration {
 
     override fun getExtras() = module { }
 
-
-    fun get() = listOf(getPresentation(), getDomain(), getData(), getExtras())
+    override fun get() = listOf(getPresentation(), getDomain(), getData(), getExtras())
 }
