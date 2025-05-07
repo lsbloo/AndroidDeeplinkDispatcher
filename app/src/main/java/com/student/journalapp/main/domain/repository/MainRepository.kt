@@ -1,6 +1,7 @@
 package com.student.journalapp.main.domain.repository
 
-// TODO
+import com.student.journalapp.main.domain.RecoveryDeepLinkResult
+
 interface MainRepository {
-    fun getAllDeepLinks(): Unit
+    suspend fun getAllDeepLinks(): RecoveryDeepLinkResult
 }

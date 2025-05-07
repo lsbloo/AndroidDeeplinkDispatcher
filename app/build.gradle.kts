@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     id("org.jetbrains.kotlin.plugin.compose") version "2.1.10"
     id("com.google.devtools.ksp") version "2.0.21-1.0.26"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.9.10"
 }
 
 android {
@@ -98,6 +99,7 @@ dependencies {
     implementation (libs.androidx.runtime.livedata.v160)
     implementation (libs.androidx.lifecycle.runtime.ktx.v261)
     implementation (libs.androidx.lifecycle.viewmodel.compose.v261)
+    implementation (libs.logging.interceptor)
 
 
     // KOIN

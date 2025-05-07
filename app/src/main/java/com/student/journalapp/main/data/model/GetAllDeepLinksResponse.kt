@@ -13,6 +13,6 @@ data class GetAllDeepLinksResponse(
 @Serializable
 data class DeepLinkData(
     @SerialName("deeplink")
-    val deepLink: String? = null,
+    val deepLink: String
 )
 

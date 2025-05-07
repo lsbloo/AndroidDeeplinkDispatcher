@@ -1,7 +1,8 @@
 package com.student.journalapp
 
 import android.app.Application
-import com.student.journalapp.core.NetworkModule
+import android.util.Log
+import com.student.journalapp.core.network.NetworkModule
 import com.student.journalapp.main.di.MainModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -12,20 +13,12 @@ class JournalApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-
-        startKoin{
+        Log.d("JournalApplication", "onCreate")
+        startKoin {
             androidLogger()
             androidContext(this@JournalApplication)
-            modules(appModule)
+            modules(NetworkModule.get())
+            modules(MainModule.get())
         }
     }
-}
-
-val appModule = listOf<Module>(
-    NetworkModule.get(),
-    MainModule.get()
-)
-
-fun <T> listOf(elements: T, elements1: List<T>): List<T> {
-    return elements1
 }
